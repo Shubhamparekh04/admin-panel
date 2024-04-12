@@ -2,7 +2,12 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
 }
 
 #main {
@@ -11,72 +16,167 @@
   display: flex;
 }
 
+
+/* sidebar */
 #sidebar {
   display: flex;
   flex-direction: column;
   border: 1px solid #000;
   width: 20%;
   height: 100vh;
-  overflow: visible;
+  overflow-y: scroll;
+}
+
+#sidebar>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* code for hide scrollbar */
+#sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 #sidebar button {
-  border-radius: 0;
   border: none;
-  padding: 15px;
-  text-align: start;
-  padding-left: 80px;
   display: flex;
-  justify-content: stretch;
   gap: 15px;
   padding: 21.5px 0px 20px 50px;
   background-color: #293142;
   color: #b6cdff;
+  font-size: 0.9rem;
 }
 
 #sidebar button:hover {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
-  transition: all 900ms ease;
+  transition: all 2000ms ease;
 }
+/* //sidebar */
 
 #content {
-  border: 1px solid #000;
   width: 80%;
   height: 100vh;
+  /* overflow:auto; */
 }
 
-nav button{
-  padding: 6px;
+/* nav bar */
+#menu {
+  margin: 10px 15px;
+  padding: 0px 10px;
+  height: 35px;
   color: white;
-  background-color: #409CFF;
-  border: 1px solid black;
+  background-color: #1679AB;
+  border: 1px solid white;
   border-radius: 5px;
 }
 
-nav{
-  background-color: #409CFF;
+a,
+ul,
+span {
+  text-decoration: none;
+  list-style: none;
+  padding: 20px 10px 0px 0px;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 13px;
+}
+
+nav {
+  color: #b2ebf2;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  background-color: #1679AB;
+  
+}
+
+ul {
+  position: absolute;
+  color: #f8f9fa;
+  background: #f8f9fa;
+  margin-top: 16px;
+  visibility: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px black;
+}
+
+nav > .links > span:hover ul {
+  visibility: visible;
+  z-index: 1;
+}
+
+li {
   padding: 10px;
-  gap: 15px;
+  width: 100%;
+  border-bottom: 1px solid #cfe4f9;
+  margin-left: 5px;
 }
 
-#quick-profile{
-display: inline-block;
+#span1 > ul > li> a,#span2 > ul > li> a{
+  color: #888888;
 }
 
-#quick-profile>i,select{
+li:nth-child(3) {
+  border-bottom: none;
+}
+
+.links > span:nth-child(2) > ul > li {
   border: none;
-  background: #409CFF;
-  font-size: 14px;
-  color: #B2EBF2;
 }
 
-#quick-profile>i:hover,select:hover{
-color: white;
-transition: all 1s;
+hr {
+  margin-left: 10px;
+}
+.fa-spider {
+  padding-top: 20px;
+  padding-right: 20px;
+  color: red;
+  font-size: 20px;
+}
+.fa-spider:hover {
+  cursor: pointer;
+}
+/* //nav bar */
+
+
+/* popup */
+
+.model1 > form {
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
 }
 
+.model1 {
+  position: absolute;
+  border: 1px solid red;
+  top: 30%;
+  left: 50%;
+  z-index: 5;
+}
+
+.model1 > form > input {
+  padding: 10px;
+}
+
+.modelbg {
+  height: 90vh;
+  width: 80%;
+  position: absolute;
+  top: 55px;
+  left: 254px;
+  filter: blur(20px);
+  -webkit-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+/* //popup */
 

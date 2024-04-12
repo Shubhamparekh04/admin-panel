@@ -16,98 +16,116 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Rubik:ital,wght@0,300;1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Rubik:ital,wght@0,300;1,300&display=swap"
       rel="stylesheet"
     />
+
 
     <title>Document</title>
   </head>
   <body>
+    <!-- main container -->
     <div id="main">
+      <!--left side sidebar -->
       <div id="sidebar">
-        <button id="dashboardBtn" for="dashboard">
+        <div style="background-color: #293142;">
+          <img src="https://www.jqueryscript.net/demo/dashboard-admin-template-bootstrap/assets/img/bootstraper-logo.png" alt="logo">
+        </div>
+        <button id="dashboardBtn" for="#dashboard">
           <i class="fa-solid fa-house"></i>Dashboard
         </button>
-        <button id="formsBtn" for="forms">
+        <button id="formsBtn" for="#forms">
           <i class="fa-solid fa-file"></i>Forms
         </button>
-        <button id="tablesBtn" for="tables">
+        <button id="tablesBtn" for="#tables">
           <i class="fa-solid fa-table"></i>Tables
         </button>
-        <button id="chartsBtn" for="charts">
+        <button id="chartsBtn" for="#charts">
           <i class="fa-solid fa-chart-simple"></i>Charts
         </button>
-        <button id="iconsBtn" for="icons">
+        <button id="iconsBtn" for="#icons">
           <i class="fa-solid fa-icons"></i>Icons
         </button>
-        <button id="uiBtn" for="uielements">
+        <button id="uiBtn" for="#uielements">
           <i class="fa-solid fa-layer-group"></i>UI Elements
         </button>
-        <button id="authBtn" for="authentication">
+        <button id="authBtn" for="#authentication">
           <i class="fa-solid fa-lock"></i>Authentication
         </button>
-        <button id="pagesBtn" for="pages">
+        <button id="pagesBtn" for="#pages">
           <i class="fa-solid fa-file-lines"></i>Pages
         </button>
-        <button id="usersBtn" for="users">
+        <button id="usersBtn" for="#users">
           <i class="fa-solid fa-users-line"></i>Users
         </button>
-        <button id="settingsBtn" for="settings">
+        <button id="settingsBtn" for="#settings">
           <i class="fa-solid fa-gears"></i>Settings
         </button>
       </div>
 
+      <!--Right side content page  -->
       <div id="content">
-        <nav>
 
+        <nav>
           <button id="menu"><i class="fa-solid fa-bars"></i></button>
           
-          <div id="quick-profile">
+          <div class="links">
+            <i class="fa-solid fa-spider"></i>
+            <span id="span1">
+              <i class="fa-solid fa-link"></i> Quick Links <i class="fa-solid fa-caret-down"></i>
+              <ul href="">
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-list"></i> Access Logs</a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-database"></i> Back ups</a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-cloud-arrow-down"></i> Updates</a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-user-tie"></i> Roles</a
+                  >
+                </li>
+              </ul>
+            </span>
 
-            <i class="fa-solid fa-link">
-                <select name="" id="">
-                    <option value="" disabled selected hidden>Quick Links</option>
-                    
-                    <option value="">
-                        <i class="fa-solid fa-list"></i>Access Logs
-                    </option>
-                    <option value="">
-                        <i class="fa-solid fa-database">Back Ups</i>
-                    </option>
-                    <option value="">
-                        <i class="fa-solid fa-cloud-arrow-down">Updates</i>
-                    </option>
-                    <option value="">
-                        <i class="fa-solid fa-user-tie">Roles</i>
-                    </option>
-              </select>
-            </i>
-
-            <i class="fa-solid fa-user">
-                <select name="" id="">
-                    <option value="" disabled selected hidden>Shubham Parekh</option>
-                    
-                    <option value="">
-                        <i class="fa-solid fa-list"></i>Access Logs
-                    </option>
-                    <option value="">
-                        <i class="fa-solid fa-database">Back Ups</i>
-                    </option>
-                    <option value="">
-                        <i class="fa-solid fa-cloud-arrow-down">Updates</i>
-                    </option>
-                    <option value="">
-                        <i class="fa-solid fa-user-tie">Roles</i>
-                    </option>
-              </select>
-            </i>
-
-
+            <span id="span2"
+              ><i class="fa-solid fa-user"></i> Shubham Parekh <i class="fa-solid fa-caret-down"></i>
+              <ul href="">
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-address-card"></i> Profile</a
+                  >
+                </li>
+                <li>
+                  <a href=""><i class="fa-solid fa-envelope"></i> Message</a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-solid fa-gear"></i> Settings</a>
+                </li>
+                <hr />
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+                  >
+                </li>
+              </ul>
+            </span>
           </div>
         </nav>
+
+        <!-- main content -->
         <div id="dashboard">Hello Dashboard</div>
         <div id="forms">Hello forms</div>
-        <div id="tables">Hello Tables</div>
+        <div id="tables"><img src="" alt=""></div>
         <div id="charts">Hello charts</div>
         <div id="icons">Hello Icons</div>
         <div id="uielements">Hello UI elements</div>
@@ -116,7 +134,22 @@
         <div id="users">Hello Users</div>
         <div id="settings">Hello Settings</div>
       </div>
+
+
+      <div class="model1">
+        <form action="">
+          <input type="text"placeholder="Username">
+          <input type="email"placeholder="Email">
+          <input type="password"placeholder="Password">
+          <input type="button" value="Submit">
+        </form>
+      </div>
+
+      <div class="modelbg"></div>
+
     </div>
+
+    <!-- jquery CDN & local script file -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="

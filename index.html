@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- flag cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+    />
 
     <link
       rel="stylesheet"
@@ -12,7 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <!-- font awesome cdn -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +25,26 @@
       rel="stylesheet"
     />
 
+    <!-- calender css link -->
+    <link rel="stylesheet" href="./calender/calendar.js.css">
+
+    <!-- JQUERY CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- COUNTER CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.js"
+      integrity="sha512-brrjTp9G6MkKX5QjXwwAQkscfFpKi3okjyZ/M3vGwwg9qI1msoz7z+EbQBLXsTnVK3POjYBGHcQvX34GFKr/7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- APAX CHART LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <title>Document</title>
   </head>
   <body>
@@ -27,17 +52,14 @@
     <div id="main">
       <!--left side sidebar -->
       <div id="sidebar">
-        <div style="background-color: #293142">
-          <img
-            src="https://www.jqueryscript.net/demo/dashboard-admin-template-bootstrap/assets/img/bootstraper-logo.png"
-            alt="logo"
-          />
+        <div id="logo">
+          <img src="./logo1.png" alt="logo" />
         </div>
         <button id="dashboardBtn" for="#dashboard">
           <i class="fa-solid fa-house"></i>Dashboard
         </button>
-        <button id="formsBtn" for="#forms">
-          <i class="fa-solid fa-file"></i>Forms
+        <button id="calenderBtn" for="#events">
+          <i class="fa-solid fa-calendar"></i>Schedule Events
         </button>
         <button id="tablesBtn" for="#tables">
           <i class="fa-solid fa-table"></i>Tables
@@ -65,13 +87,14 @@
         </button>
       </div>
 
-      <!--Right side content page  -->
+      <!--Right side CONTAINER page  -->
       <div id="content">
+        <!-- NAVBAR -->
         <nav>
           <button id="menu"><i class="fa-solid fa-bars"></i></button>
 
           <div class="links">
-            <i class="fa-solid fa-spider"></i>
+            <i class="fa-solid fa-spider fa-bounce"></i>
             <span id="span1">
               <i class="fa-solid fa-link"></i> Quick Links
               <i class="fa-solid fa-caret-down"></i>
@@ -120,46 +143,333 @@
         </nav>
 
         <!-- main content -->
-        <div id="dashboard">Hello Dashboard</div>
-        <div id="forms">Hello forms</div>
-
-        <div id="tables">
-          <img src="" width="100%" />
+        <div id="dashboard" class="example">
+          <div id="chartcntr">
+            <!-- top 4 cards -->
+            <div id="card12cntr">
+              <div id="card1">
+                <div id="card1child">
+                  <i
+                    class="fa-solid fa-cart-shopping fa-2xl;"
+                    style="color: #00b5ad; font-size: 48px"
+                  >
+                  </i>
+      
+                  <div id="card1gchild">
+                    <p>New Orders</p>
+                    <h4 class="counter">6267</h4>
+                  </div>
+                </div>
+                <footer>
+                  <hr width="90%" />
+                  <div class="stats" style="color: #bababa">
+                    <i class="fa-solid fa-rotate-right"></i> Updated every 30 minutes
+                  </div>
+                </footer>
+              </div>
+      
+              <div id="card2">
+                <div id="card2child">
+                  <i
+                    class="fa-solid fa-money-bill-1 fa-2xl;"
+                    style="color: #b5cc18; font-size: 48px"
+                  ></i>
+      
+                  <div id="card2gchild">
+                    <p>Revenue</p>
+                    <h4>$<span class="counter">180900</span></h4>
+                  </div>
+                </div>
+                <footer>
+                  <hr width="90%" />
+                  <div class="stats" style="color: #bababa">
+                    <i class="fa-solid fa-calendar"></i> In this current Month
+                  </div>
+                </footer>
+              </div>
+            </div>
+      
+            <div id="card34cntr">
+              <div id="card3">
+                <div id="card3child">
+                  <i
+                    class="fa-solid fa-eye"
+                    style="color: #6435c9; font-size: 48px"
+                  ></i>
+      
+                  <div id="card3gchild">
+                    <p>Page views</p>
+                    <h4 class="counter">28210</h4>
+                  </div>
+                </div>
+                <footer>
+                  <hr width="90%" />
+                  <div class="stats" style="color: #bababa">
+                    <i class="fa-solid fa-stopwatch"></i> In the last 24 Hour
+                  </div>
+                </footer>
+              </div>
+      
+              <div id="card4">
+                <div id="card4child">
+                  <i
+                    class="fa-solid fa-envelope"
+                    style="color: #f2711c; font-size: 48px"
+                  ></i>
+      
+                  <div id="card4gchild">
+                    <p>Support Request</p>
+                    <h4 class="counter">75</h4>
+                  </div>
+                </div>
+                <footer>
+                  <hr width="90%" />
+                  <div class="stats" style="color: #bababa">
+                    <i class="fa-solid fa-envelope-open-text"></i> Active in the last
+                    7 days
+                  </div>
+                </footer>
+              </div>
+            </div>
+          </div>
+      
+          <div id="chartcntr2">
+            <!-- chart1 -->
+            <div id="chart1cntr">
+              <h2>Traffic Overview</h2>
+              <p>Your year long website traffic data</p>
+              <section id="chart1"></section>
+            </div>
+      
+            <!-- chart2  -->
+            <div id="chart2cntr">
+              <h2>Sales Overview</h2>
+              <p>Your year long sales data</p>
+              <section id="chart2"></section>
+            </div>
+          </div>
+      
+          <div id="tablecntr">
+            <div id="table1">
+              <h2>Top Visitors by Country</h2>
+              <p>Your year long website traffic data</p>
+              <table cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Country</th>
+                    <th>Unique Visitors</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fi fi-us"></i> United States</td>
+                    <td class="text-right">27,340</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-in"></i> India</td>
+                    <td class="text-right">21,280</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-jp"></i> Japan</td>
+                    <td class="text-right">18,210</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-gb"></i> United Kingdom</td>
+                    <td class="text-right">15,176</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-es"></i> Spain</td>
+                    <td class="text-right">14,276</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-de"></i> Germany</td>
+                    <td class="text-right">13,176</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-br"></i> Brazil</td>
+                    <td class="text-right">12,176</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-id"></i> Indonesia</td>
+                    <td class="text-right">11,886</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-ph"></i> Philippines</td>
+                    <td class="text-right">11,509</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-sg"></i> Singapore</td>
+                    <td class="text-right">1,700</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="table2">
+              <h2>Most Sales by Country</h2>
+              <p>Your year long sales data</p>
+              <table cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Country</th>
+                    <th>Unique Visitors</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fi fi-us"></i> United States</td>
+                    <td class="text-right">27,340</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-in"></i> India</td>
+                    <td class="text-right">21,280</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-jp"></i> Japan</td>
+                    <td class="text-right">18,210</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-gb"></i> United Kingdom</td>
+                    <td class="text-right">15,176</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-es"></i> Spain</td>
+                    <td class="text-right">14,276</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-de"></i> Germany</td>
+                    <td class="text-right">13,176</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-br"></i> Brazil</td>
+                    <td class="text-right">12,176</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-id"></i> Indonesia</td>
+                    <td class="text-right">11,886</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-ph"></i> Philippines</td>
+                    <td class="text-right">11,509</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-sg"></i> Singapore</td>
+                    <td class="text-right">1,700</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- bottom 4 cards -->
+          <div id="chartcntr3">
+            <!-- top 4 cards -->
+            <div id="card56cntr">
+              <div id="card5">
+                <i
+                      class="fa-solid fa-thumbs-up fa-2xl"
+                      style="color: #2185d0"
+                    ></i>
+                    <h4>+<span class="counter">21900</span></h4>
+                    <p>FACEBOOK PAGE LIKES</p>
+                </div>
+              
+      
+              <div id="card6">
+                <i class="fa-solid fa-reply-all fa-2xl"
+                      style="color: #f2711c"
+                    ></i>
+                    <h4>+<span class="counter">22566</span></h4>
+                    <p>INSTAGRAM FOLLOWERS</p>
+              </div>
+            </div>
+      
+            <div id="card78cntr">
+              <div id="card7">
+                <i class="fa-solid fa-envelope fa-2xl" style="color: #767676"></i>
+                    <h4>+<span class="counter">15566</span></h4>
+                    <p>E-MAIL SUBSCRIBERS</p>
+                  </div>
+      
+                  <div id="card8">
+                    <i class="fa-solid fa-dollar-sign fa-2xl"
+                          style="color: #b5cc18"
+                        ></i>
+                        <h4>+<span class="counter">98601</span></h4>
+                        <p>TOTAL SALES</p>
+                  </div>
+              </div>      
+        </div>
         </div>
 
-        <div id="charts" width="100%" height="90vh">
-          <canvas id="acquisitions" width="100%"></canvas>
+        <div id="events" class="example">
+          <h2>Schedule Your Events</h2>
+          <div id="calendercntr">
+            <div id="calendar"></div>
+          </div>
         </div>
 
-        <div id="icons">Hello Icons</div>
-        <div id="uielements">Hello UI elements</div>
-        <div id="authentication">Hello Authentication</div>
-        <div id="pages">Hello Pages</div>
-        <div id="users">Hello Users</div>
-        <div id="settings">Hello Settings</div>
+        <div id="tables" class="example">
+          <img src="./panel.jpg" />
+        </div>
+
+        <div id="charts" class="example">
+          <div>
+            <canvas id="acquisitions" ></canvas>
+          </div>
+        </div>
+
+        <div id="icons" class="example">Hello Icons</div>
+        <div id="uielements" class="example">Hello UI elements</div>
+        <div id="authentication" class="example">Hello Authentication</div>
+        <div id="pages" class="example">Hello Pages</div>
+        <div id="users" class="example">Hello Users</div>
+        <div id="settings" class="example">Hello Settings</div>
       </div>
 
+      <!-- POPUP FORM & LUR BACKGROUND -->
       <div class="model1">
         <form action="">
-          <input type="text" placeholder="Username" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <input type="button" value="Submit" />
+          <h2>Sign in</h2>
+          <label for="">Username or email address</label>
+          <input type="email" placeholder="Username or email address"/>
+          <div id="lblfgtpwd"><label for="">Password</label><a href="">Forgot password</a></div>
+          <input type="password" placeholder="password"/>
+          <div id="formbtn">
+            <input type="button" value="Sign in" />
+            <input type="button" value="signup" />
+          </div>
         </form>
       </div>
 
-      <div class="modelbg"></div>
-    </div>
+      <div class="model2" id="signup">
+        <form action="">
+          <h2>Sign up</h2>
+          <label for="">Username</label>
+          <input type="text" placeholder="type your username"/>
+          <label for="">Password</label>
+          <input type="password" placeholder="type your password"/>
 
-    <!-- jquery CDN & local script file -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
+          <label for="">Confirm password</label>
+          <input type="password" placeholder="confirm password"/>
+
+          <div id="formbtn2">
+            <input type="button" value="Sign up" />
+            <input type="button" value="Sign in" />
+          </div>
+        </form>
+      </div>
+
+      <div class="modelbg">
+        <div id="modelbgchild"></div>
+      </div>
+    </div>
 
     <!-- umd.min js file cdn for chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+    <!-- counter -->
+    <script src="./counter/counter.js"></script>
+    <!-- calender -->
+    <script src="./calender/calendar.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

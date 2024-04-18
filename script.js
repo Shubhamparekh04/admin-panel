@@ -1,4 +1,5 @@
 var visible = false;
+var signUpModel = false;
 
 function sideCustomization() {
   visible = !visible;
@@ -22,8 +23,8 @@ function sideCustomization() {
       width: "80%",
       height: "91vh",
     });
-    $(".model1").css({ left: "50%", top: "30%" });
-    $(".model2").css({ left: "48%", top: "28%" });
+    $(".model1").css({ left: "47%", top: "30%" });
+    $(".model2").css({ left: "45%", top: "28%" });
   }
 }
 
@@ -66,14 +67,21 @@ $("#menu").on("click", function () {
 $(".model1,.model2,.modelbg").hide();
 
 $(".fa-spider").on("click", function () {
-  visible = !visible;
-  $(".model1,.modelbg").toggle();
-  sideCustomization();
-  $(".apexcharts-toolbar").css("z-index", "-11");
+  if (signUpModel) {
+    $(".model1, .modelbg").hide();
+    $(".model2, .modelbg").hide();
+    signUpModel = false;
+  } else {
+    visible = !visible;
+    $(".model1,.modelbg").toggle();
+    sideCustomization();
+    $(".apexcharts-toolbar").css("z-index", "-11");
+  }
 });
 
 // signup sign in toggle
 $("#formbtn > input[type=button]:nth-child(2)").on("click", function () {
+  signUpModel = true;
   $(".model1").hide();
   $(".model2").show();
 });
@@ -82,6 +90,7 @@ $("#formbtn2 > input[type=button]:nth-child(2)").on("click", function () {
   $(".model2").hide();
   $(".model1").show();
 });
+
 
 // //chart
 (async function () {
@@ -270,7 +279,12 @@ var chart = new ApexCharts(document.querySelector("#chart2"), options);
 chart.render();
 
 // calender
-var calendarInstance1 = new calendarJs( "calendar", {
-  manualEditingEnabled: true
+var calendarInstance1 = new calendarJs("calendar", {
+  manualEditingEnabled: true,
   // All your options can be set here
-} );
+});
+
+$("#span1").on("mouseover", function () {
+  $("ul").css("z-index", "7");
+  $(".modelbg,model1,model2").css("z-index", "0");
+});

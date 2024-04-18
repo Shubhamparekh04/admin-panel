@@ -22,6 +22,7 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
+  position: relative;
 }
 
 /* sidebar */
@@ -103,6 +104,10 @@ span {
   font-size: 13px;
 }
 
+#span2>ul{
+  padding: 10px;
+}
+
 nav {
   color: #4ebdeb;
   display: flex;
@@ -126,6 +131,7 @@ ul {
   visibility: hidden;
   border-radius: 6px;
   box-shadow: 0px 0px 5px black;
+  z-index: 10;
 }
 
 nav > .links > span:hover ul {
@@ -215,7 +221,7 @@ hr {
   position: absolute;
   top: 25% !important;
   left: 50%;
-  z-index: 5;
+  z-index: 2;
   padding: 25px;
   background-color: #161b22;
   border-radius: 5px;
@@ -251,6 +257,7 @@ form > label {
   top: 55px;
   left: 255px;
   backdrop-filter: blur(5px);
+  z-index: 1;
 }
 
 #modelbgchild {
@@ -259,7 +266,6 @@ form > label {
   opacity: 0.8;
   background-color: #0d1117;
 }
-
 
 /* model2 */
 
@@ -271,9 +277,9 @@ form > label {
 }
 .model2 {
   position: absolute;
-  top: 25% !important;
+  top: 20% !important;
   left: 50%;
-  z-index: 5;
+  z-index: 2;
   padding: 25px;
   background-color: #161b22;
   border-radius: 5px;
@@ -289,6 +295,7 @@ form > label {
   color: white;
   margin-bottom: 10px;
 }
+
 
 .model2 > form > #formbtn2 > input[type="button"] {
   background-color: #29903b;
@@ -412,7 +419,6 @@ form > label {
 
 #chart1,
 #chart2 {
-  border: 1px solid #000;
   padding: 5px;
   width: 80%;
   margin: auto;
@@ -498,7 +504,7 @@ td {
 
 /* calender */
 
-#calendercntr{
+#calendercntr {
   display: flex;
   justify-content: center;
   width: fit-content;
@@ -506,9 +512,7 @@ td {
   margin: auto;
 }
 
-#events>h2{
+#events > h2 {
   line-height: 50px;
   text-align: center;
 }
-
-

@@ -18,13 +18,13 @@ function sideCustomization() {
   } else {
     $("#content,nav").css("width", "80%");
     $(".modelbg").css({
-      left: "282px",
+      left: "254px",
       top: "55px",
       width: "80%",
-      height: "91vh",
+      height: "90vh",
     });
     $(".model1").css({ left: "47%", top: "30%" });
-    $(".model2").css({ left: "45%", top: "28%" });
+    $(".model2").css({ left: "45%", top: "25%" });
   }
 }
 
@@ -90,34 +90,6 @@ $("#formbtn2 > input[type=button]:nth-child(2)").on("click", function () {
   $(".model2").hide();
   $(".model1").show();
 });
-
-
-// //chart
-(async function () {
-  const data = [
-    { year: 2010, count: 10 },
-    { year: 2011, count: 20 },
-    { year: 2012, count: 15 },
-    { year: 2013, count: 25 },
-    { year: 2014, count: 22 },
-    { year: 2015, count: 30 },
-    { year: 2016, count: 28 },
-  ];
-
-  new Chart(document.getElementById("acquisitions"), {
-    type: "radar",
-    data: {
-      labels: data.map((row) => row.year),
-      datasets: [
-        {
-          label: "Acquisitions by year",
-          data: data.map((row) => row.count),
-        },
-      ],
-    },
-  });
-})();
-// //chart
 
 //counter
 
@@ -282,9 +254,4 @@ chart.render();
 var calendarInstance1 = new calendarJs("calendar", {
   manualEditingEnabled: true,
   // All your options can be set here
-});
-
-$("#span1").on("mouseover", function () {
-  $("ul").css("z-index", "7");
-  $(".modelbg,model1,model2").css("z-index", "0");
 });

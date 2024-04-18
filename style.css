@@ -104,7 +104,7 @@ span {
   font-size: 13px;
 }
 
-#span2>ul{
+#span2 > ul {
   padding: 10px;
 }
 
@@ -277,7 +277,7 @@ form > label {
 }
 .model2 {
   position: absolute;
-  top: 20% !important;
+  top: 17% !important;
   left: 50%;
   z-index: 2;
   padding: 25px;
@@ -296,18 +296,12 @@ form > label {
   margin-bottom: 10px;
 }
 
-
 .model2 > form > #formbtn2 > input[type="button"] {
   background-color: #29903b;
   color: white;
   padding: 10px 30px 10px 30px;
   border-radius: 5px;
   border: none;
-}
-
-#charts > div {
-  height: 100%;
-  width: 100vh;
 }
 
 #tables > img {
@@ -330,19 +324,12 @@ form > label {
   background-color: #f1f1f1;
 }
 
-@media (max-width: 1340px) {
-  #chartcntr {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-
 #card12cntr,
 #card34cntr {
   width: 100%;
   padding: 10px;
   display: flex;
-  gap: 60px;
+  gap: 45px;
   justify-content: space-around;
 }
 
@@ -353,7 +340,7 @@ form > label {
   background-color: white;
   border-radius: 5px;
   width: 50%;
-  padding: 10px;
+  padding-top: 10px;
 }
 
 #card1child,
@@ -386,7 +373,7 @@ form > label {
 }
 
 .stats {
-  padding: 5px;
+  padding: 7px;
   text-align: center;
 }
 
@@ -395,7 +382,7 @@ form > label {
 #chartcntr2 {
   display: flex;
   justify-content: space-around;
-  padding: 30px;
+  padding: 15px;
   width: 100%;
   margin: auto;
   gap: 50px;
@@ -431,7 +418,7 @@ form > label {
   justify-content: space-around;
   padding: 20px 10px 20px 10px;
   background-color: #f1f1f1;
-  gap: 10px;
+  gap: 50px;
 }
 
 #table1,
@@ -468,13 +455,6 @@ td {
   justify-content: space-around;
   gap: 35px;
   background-color: #f1f1f1;
-}
-
-@media (max-width: 880px) {
-  #chartcntr3 {
-    gap: 30px;
-    flex-direction: column;
-  }
 }
 
 #card56cntr,
@@ -516,3 +496,137 @@ td {
   line-height: 50px;
   text-align: center;
 }
+
+#events {
+  background-image: url(./event.jpg);
+  background-size: cover;
+}
+
+/* chart option */
+
+#charts > div {
+  height: 100vh;
+  width: 80%;
+  margin: auto;
+}
+
+#charts h2 {
+  text-align: center;
+  line-height: 40px;
+}
+
+/* -------------------------------------------------------- */
+
+@media (max-width: 880px) {
+  #chartcntr3 {
+    gap: 30px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1180px) {
+  #chartcntr {
+    flex-direction: column;
+    gap: 30px;
+    padding: 36px;
+  }
+
+  #card1,
+  #card2,
+  #card3,
+  #card4 {
+    width: 40%;
+    padding: 0px;
+  }
+
+  #card1child,
+  #card2child,
+  #card3child,
+  #card4child {
+    padding: 30px;
+  }
+
+  #chartcntr2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tablecntr {
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  #card12cntr,
+  #card34cntr {
+    justify-content: center;
+  }
+
+  #card1child > i,
+  #card2child > i,
+  #card3child > i,
+  #card4child > i {
+    font-size: 50px !important;
+  }
+  #table1,
+  #table2 {
+    width: 76%;
+  }
+  #table1 > h2,
+  p,
+  #table2 > h2,
+  p {
+    text-align: center;
+  }
+  table {
+    width: 71%;
+    margin: auto;
+  }
+
+  #chartcntr3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  #card56cntr,
+  #card78cntr {
+    width: 83%;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  #card5,
+  #card6,
+  #card7,
+  #card8 {
+    padding: 42px;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 23px;
+    /* background-color: white; */
+    border-radius: 5px;
+  }
+
+  #card5 > i,
+  #card6 > i,
+  #card7 > i,
+  #card8 > i {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 820px) {
+  #card1child,
+  #card2child,
+  #card3child,
+  #card4child {
+    padding: 30px;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* --------------------------------------------------- */

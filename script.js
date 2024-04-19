@@ -18,7 +18,7 @@ function sideCustomization() {
   } else {
     $("#content,nav").css("width", "80%");
     $(".modelbg").css({
-      left: "254px",
+      left: "250.5px",
       top: "55px",
       width: "80%",
       height: "90vh",
@@ -28,7 +28,19 @@ function sideCustomization() {
   }
 }
 
+
+
+
+// ON START LOAD ONLY DASHBOARD TO SHOW REST HIDDEN
+
+$("#content>div").hide();
+$("#dashboard").show();
+
+
+
+
 // NAVBAR LINKS HOVER CSS
+
 $("#span1,#span2").on("mouseenter", function () {
   $(this).css("color", "#4EBDEB");
 });
@@ -36,17 +48,22 @@ $("#span1,#span2").on("mouseleave", function () {
   $(this).css("color", "white");
 });
 
-// INITIALLY LOAD ONLY DASHBOARD TO SHOW REST TO BE HIDDEN
-$("#content>div").hide();
-$("#dashboard").show();
 
-// ON SIDEBAR BUTTON CLICK  SIDEBAR TO BE TOGGLE & CLICKED BUTTON CONTENT TO BE SHOW REST CONTENT & POPUP TO BE HIDE
+
+
+
+
+
+
+// SIDEBAR BUTTON CLICK  ->CONTENT TO  SHOW -> REST CONTENT & POPUP TO BE HIDE
+
+
 $("#sidebar>button").on("click", function () {
   $("#sidebar").toggle(0);
   $(".model1 ,.model2, .modelbg").hide();
   $("#content>div").hide();
 
-  // FOR COUNTER TO RUN AGAIN WHEN CLICKED ON DASHBOARD BUTTON
+  // COUNTER TO RE-RUN ON DASHBOARD BUTTON CLICK (PAGE WILL REFRESH) 
   if ($(this).attr("for") === "#dashboard") {
     location.reload(true);
   } else {
@@ -56,14 +73,25 @@ $("#sidebar>button").on("click", function () {
   sideCustomization();
 });
 
-// HAMBURGER Menu click-------------------------------------------------------
+// 
+
+
+
+
+
+// HAMBURGER MENU SIDEBAR TOGGLE
+
 $("#menu").on("click", function () {
   $("#sidebar").toggle(0);
   $(".model1 ,.model2 , .modelbg").hide();
   sideCustomization();
 });
 
-// popup
+
+
+
+
+// POPUP
 $(".model1,.model2,.modelbg").hide();
 
 $(".fa-spider").on("click", function () {
@@ -75,7 +103,6 @@ $(".fa-spider").on("click", function () {
     visible = !visible;
     $(".model1,.modelbg").toggle();
     sideCustomization();
-    $(".apexcharts-toolbar").css("z-index", "-11");
   }
 });
 
@@ -91,7 +118,17 @@ $("#formbtn2 > input[type=button]:nth-child(2)").on("click", function () {
   $(".model1").show();
 });
 
-//counter
+
+
+// MODEL BG CLICK TO HIDE 
+
+$("#modelbgchild").click(function(){
+  $(".model1,.model2,.modelbg").hide();
+});
+  
+
+
+//COUNTER
 
 $(".counter").counter({
   autoStart: true,
@@ -106,9 +143,12 @@ $(".counter").counter({
   },
 });
 
-// DASHBOARD CHARTS
 
-// chart 1
+
+
+
+// DASHBOARD CHARTS
+    // Dashboard chart 1
 var options = {
   series: [
     {
@@ -152,7 +192,7 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chart1"), options);
 chart.render();
 
-//chart 2
+    //Dashboard chart 2
 var options = {
   series: [
     {
@@ -250,8 +290,182 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chart2"), options);
 chart.render();
 
-// calender
+
+
+
+
+// CALENDER
 var calendarInstance1 = new calendarJs("calendar", {
   manualEditingEnabled: true,
-  // All your options can be set here
 });
+
+
+
+
+
+// CHART SECTION
+
+ // chart1
+
+ const ctx = document.getElementById("myChart1");
+
+ new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+ });
+
+ // chart 2
+
+ (async function () {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  new Chart(document.getElementById("acquisitions"), {
+    type: "bar",
+    data: {
+      labels: data.map((row) => row.year),
+      datasets: [
+        {
+          label: "Acquisitions by year",
+          data: data.map((row) => row.count),
+        },
+      ],
+    },
+  });
+ })();
+
+ // chart 3
+
+ (async function () {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  new Chart(document.getElementById("acquisitions-1"), {
+    type: "pie",
+    data: {
+      labels: data.map((row) => row.year),
+      datasets: [
+        {
+          label: "Acquisitions by year",
+          data: data.map((row) => row.count),
+        },
+      ],
+    },
+  });
+ })();
+
+ // chart 4
+
+ (async function () {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  new Chart(document.getElementById("acquisitions-2"), {
+    type: "doughnut",
+    data: {
+      labels: data.map((row) => row.year),
+      datasets: [
+        {
+          label: "Acquisitions by year",
+          data: data.map((row) => row.count),
+        },
+      ],
+    },
+  });
+ })();
+
+ // chart 5
+
+ (async function () {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  new Chart(document.getElementById("acquisitions-3"), {
+    type: "polarArea",
+    data: {
+      labels: data.map((row) => row.year),
+      datasets: [
+        {
+          label: "Acquisitions by year",
+          data: data.map((row) => row.count),
+        },
+      ],
+    },
+  });
+ })();
+
+ // chart 6
+
+ (async function () {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  new Chart(document.getElementById("acquisitions-4"), {
+    type: "radar",
+    data: {
+      labels: data.map((row) => row.year),
+      datasets: [
+        {
+          label: "Acquisitions by year",
+          data: data.map((row) => row.count),
+        },
+      ],
+    },
+  });
+ })();
+
+// //chart section
+
+// ---------------------------------
+

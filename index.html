@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"
+      integrity="sha512-ZwR1/gSZM3ai6vCdI+LVF1zSq/5HznD3ZSTk7kajkaj4D292NLuduDCO1c/NT8Id+jE58KYLKT7hXnbtryGmMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- flag cdn -->
     <link
       rel="stylesheet"
@@ -47,7 +54,13 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <!-- CHART JS CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"
+      integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
 
     <title>Document</title>
   </head>
@@ -57,37 +70,49 @@
       <!--left side sidebar -->
       <div id="sidebar">
         <div id="logo">
-          <img src="./logo1.png" alt="logo" />
+          <img src="./DirectAdminLogo.png" alt="logo" />
         </div>
         <button id="dashboardBtn" for="#dashboard">
-          <i class="fa-solid fa-house"></i>Dashboard
+          <abbr title="Dashboard"><i class="fa-solid fa-house"></i></abbr
+          ><span>Dashboard</span>
         </button>
         <button id="calenderBtn" for="#events">
-          <i class="fa-solid fa-calendar"></i>Schedule Events
-        </button>
-        <button id="tablesBtn" for="#tables">
-          <i class="fa-solid fa-table"></i>Tables
-        </button>
-        <button id="chartsBtn" for="#charts">
-          <i class="fa-solid fa-chart-simple"></i>Charts
-        </button>
-        <button id="iconsBtn" for="#icons">
-          <i class="fa-solid fa-icons"></i>Icons
-        </button>
-        <button id="uiBtn" for="#uielements">
-          <i class="fa-solid fa-layer-group"></i>UI Elements
+          <abbr title="Events"><i class="fa-solid fa-calendar"></i></abbr
+          ><span>Schedule Events</span>
         </button>
         <button id="authBtn" for="#authentication">
-          <i class="fa-solid fa-lock"></i>Authentication
+          <abbr title="Authentication"><i class="fa-solid fa-lock"></i></abbr
+          ><span>Authentication</span>
         </button>
+        <button id="tablesBtn" for="#tables">
+          <abbr title="Tables"><i class="fa-solid fa-table"></i></abbr
+          ><span>Tables</span>
+        </button>
+        <button id="chartsBtn" for="#charts">
+          <abbr title="Charts"><i class="fa-solid fa-chart-simple"></i></abbr
+          ><span>Charts</span>
+        </button>
+      </button>
+      
+        <!-- <button id="iconsBtn" for="#icons">
+          <abbr title="Icons"><i class="fa-solid fa-icons"></i></abbr
+          ><span>Icons</span>
+        </button> -->
+        <button id="uiBtn" for="#uielements">
+          <abbr title="UI ELements"
+            ><i class="fa-solid fa-layer-group"></i></abbr
+          ><span>UI Elements</span>
         <button id="pagesBtn" for="#pages">
-          <i class="fa-solid fa-file-lines"></i>Pages
+          <abbr title="Pages"><i class="fa-solid fa-file-lines"></i></abbr
+          ><span>Pages</span>
         </button>
         <button id="usersBtn" for="#users">
-          <i class="fa-solid fa-users-line"></i>Users
+          <abbr title="Users"><i class="fa-solid fa-users-line"></i></abbr
+          ><span>Users</span>
         </button>
         <button id="settingsBtn" for="#settings">
-          <i class="fa-solid fa-gears"></i>Settings
+          <abbr title="Settings"><i class="fa-solid fa-gears"></i></abbr
+          ><span>Settings</span>
         </button>
       </div>
 
@@ -97,7 +122,6 @@
         <nav>
           <button id="menu"><i class="fa-solid fa-bars"></i></button>
 
-          
           <div class="links">
             <i class="fa-solid fa-spider fa-bounce"></i>
 
@@ -408,6 +432,13 @@
               </div>
             </div>
           </div>
+
+
+          <div id="map">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1E61phO-fC_jyLe8tkt1UCXtAPMjrle4&ehbc=2E312F" width="100%" height="480"></iframe>
+          </div>
+
+
         </div>
 
         <div id="events" class="example">
@@ -418,20 +449,122 @@
         </div>
 
         <div id="tables" class="example">
-          <img src="./panel.jpg" />
+          <!-- <img src="./panel.jpg" /> -->
+          <div id="tabletbl">
+            <h2>Top Visitors by Country</h2>
+              <p>Your year long website traffic data</p>
+              <table cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Country</th>
+                    <th>Unique Visitors</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fi fi-us"></i> United States</td>
+                    <td class="text-right">27,340</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-in"></i> India</td>
+                    <td class="text-right">21,280</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-jp"></i> Japan</td>
+                    <td class="text-right">18,210</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-gb"></i> United Kingdom</td>
+                    <td class="text-right">15,176</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-es"></i> Spain</td>
+                    <td class="text-right">14,276</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-de"></i> Germany</td>
+                    <td class="text-right">13,176</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-br"></i> Brazil</td>
+                    <td class="text-right">12,176</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-id"></i> Indonesia</td>
+                    <td class="text-right">11,886</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-ph"></i> Philippines</td>
+                    <td class="text-right">11,509</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fi fi-sg"></i> Singapore</td>
+                    <td class="text-right">1,700</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+          
+
         </div>
 
         <div id="charts" class="example">
-          <div>
-            <h2>Radar chart</h2>
+          <div id="chartconatiner1" data-aos="flip-left">
+            <h2>Line Chart</h2>
+            <canvas id="myChart1"></canvas>
           </div>
 
+          <div id="chartconatiner2" data-aos="flip-right">
+            <h2>Bar Chart</h2>
+            <canvas id="acquisitions"></canvas>
+          </div>
+
+          <div id="chartconatiner3" data-aos="flip-left">
+            <h2>Pie Chart</h2>
+
+            <canvas id="acquisitions-1"></canvas>
+          </div>
+
+          <div id="chartconatiner4" data-aos="right">
+            <h2>Doughnut Chart</h2>
+
+            <canvas id="acquisitions-2"></canvas>
+          </div>
+
+          <div id="chartconatiner5" data-aos="flip-left">
+            <h2>Polar Area Chart</h2>
+            <canvas id="acquisitions-3"></canvas>
+          </div>
+
+          <div id="chartconatiner6" data-aos="flip-right">
+            <h2>Radar Chart</h2>
+            <canvas id="acquisitions-4"></canvas>
+          </div>
 
         </div>
 
-        <div id="icons" class="example">Hello Icons</div>
-        <div id="uielements" class="example">Hello UI elements</div>
-        <div id="authentication" class="example">Hello Authentication</div>
+        <div id="uielements" class="example">
+            <img src="./uiele.jpg" alt="">
+        </div>
+
+        <div id="authentication" class="example">
+          
+          <div id="authentication">
+            <form action="">
+              <h2>User Authentication</h2>
+              
+              <input type="email" placeholder="Username or email address" />
+              <div id="lblfpwd">
+                <a href="">Forgot password</a>
+              </div>
+              <input type="password" placeholder="password" />
+                <input type="button" value="Sign in" />
+            </form>
+          </div>
+
+        </div>
+
+
         <div id="pages" class="example">Hello Pages</div>
         <div id="users" class="example">Hello Users</div>
         <div id="settings" class="example">Hello Settings</div>
@@ -473,7 +606,7 @@
       </div>
 
       <div class="modelbg">
-        <div id="modelbgchild"></div>
+        <canvas id="modelbgchild"></canvas>
       </div>
     </div>
 
@@ -484,6 +617,9 @@
     <script src="./counter/counter.js"></script>
     <!-- calender -->
     <script src="./calender/calendar.js"></script>
+    
+    <!-- Local JS -->
     <script src="./script.js"></script>
+    
   </body>
 </html>

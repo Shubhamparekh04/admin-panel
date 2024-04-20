@@ -51,11 +51,12 @@ body {
 #sidebar button {
   border: none;
   display: flex;
-  gap: 15px;
-  padding: 21.5px 0px 20px 50px;
+  gap: 20px;
+  padding: 24.5px 20px 20px 30px;
   background-color: #131727;
   color: rgba(255, 255, 255, 0.349);
   font-size: 0.9rem;
+  text-align: center;
 }
 
 #sidebar button:hover {
@@ -79,6 +80,7 @@ body {
 }
 
 /* nav bar */
+
 #menu {
   margin: 10px 15px;
   padding: 0px 10px;
@@ -96,8 +98,8 @@ ul {
   padding: 20px 10px 0px 0px;
 }
 
-#lblfpwd > a{
-  color:#03A9F4;
+#lblfpwd > a {
+  color: #03a9f4;
 }
 
 .links {
@@ -105,6 +107,10 @@ ul {
   justify-content: flex-start;
   gap: 10px;
   font-size: 13px;
+}
+
+#content > nav > div > img {
+  margin: 5px 20px 0px 0px;
 }
 
 #span2 > ul {
@@ -431,12 +437,11 @@ p {
 
 /* UI Element section */
 
-#uielements>img{
+#uielements > img {
   width: 100%;
   /* height: fit-content; */
-object-fit: contain;
-/* aspect-ratio: 3/1; */
-
+  object-fit: contain;
+  /* aspect-ratio: 3/1; */
 }
 
 /* table */
@@ -597,7 +602,7 @@ div#authentication {
 }
 
 #authentication > form > input[type="password"],
-#authentication > form >input[type="email"] {
+#authentication > form > input[type="email"] {
   border: none;
   padding: 10px;
   border-radius: 20px;
@@ -608,7 +613,7 @@ div#authentication {
   margin-top: 10px;
   width: 100%;
   height: 40px;
-  background-color: #03A9F4;
+  background-color: #03a9f4;
   color: #fff;
   border-radius: 25px;
   box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
@@ -631,7 +636,7 @@ div#authentication {
   gap: 10px;
 }
 
-#tabletbl{
+#tabletbl {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -639,11 +644,10 @@ div#authentication {
   gap: 10px;
   padding: 20px;
 }
-#tabletbl>table{
+#tabletbl > table {
   width: 50%;
   padding: 20px;
 }
-
 
 /* ---------------------media queries----------------------------------- */
 
@@ -826,6 +830,41 @@ div#authentication {
   }
 }
 
+/* Users section */
+
+div#users {
+  padding: 20px;
+}
+
+#users > h2 {
+  line-height: 50px;
+}
+#user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#user-table th,
+#user-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+#user-table th {
+  background-color: #f2f2f2;
+}
+#user-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+#user-table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+
+/* settings section */
+#settings > img{
+  width: 100%;
+  object-fit: contain;
+}
 /* --------------------------------------------------- */
 
 .apexcharts-toolbar {
@@ -839,38 +878,67 @@ div#authentication {
     display: none;
   }
 
+  #dashboardBtn {
+    margin-top: 22px;
+  }
+
+  #sidebar {
+    width: 15% !important;
+  }
+
+  nav,
+  #content {
+    width: 100% !important;
+  }
+
+  .links,#content > nav > div > div {
+    margin-right: 70px;
+  }
+
   #sidebar button {
-    /* padding: 0px; */
     font-size: 35px;
     justify-content: center;
     padding: 20px;
-}
+  }
 
-
+  #span1,
+  #span2 {
+    padding: 20px 10px 0px 0px;
+  }
 
   #menu {
-    padding: 10px 20px;
-    height: 50px;
+    font-size: 15px;
+    padding: 0px 13px 0px 13px;
   }
 
   #menu > i {
-    font-size: 30px;
+    font-size: 15px;
   }
 
   abbr {
     text-decoration: none;
   }
-
-
-
 }
 
-@media (max-width: 630px){
+@media (max-width: 630px) {
   #sidebar button > abbr > i {
     font-size: 30px;
     margin: auto;
+  }
+
+  .fa-spider {
+    padding: 10px;
+  }
+
+  nav {
+    padding: 4px 0px 4px 0px;
+  }
+
+  @media (max-width: 581px) {
+    #content > nav > div > div,#content > nav > div > i{
+      display: none;
+    }
+    
+    
+  }
 }
-}
-
-
-

@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <!-- tool tip css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spiketip-tooltip@1.1.1/spiketip.min.css">
+
     <link rel="stylesheet" href="style.css" />
 
     <script
@@ -61,6 +66,8 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    
+
 
     <title>Document</title>
   </head>
@@ -72,23 +79,22 @@
         <div id="logo">
           <img src="./DirectAdminLogo.png" alt="logo" />
         </div>
-        <button id="dashboardBtn" for="#dashboard">
-          <abbr title="Dashboard"><i class="fa-solid fa-house"></i></abbr
-          ><span>Dashboard</span>
+        <button id="dashboardBtn" for="#dashboard" spiketip-title="Dashboard" spiketip-pos="top" spiketip-color="info" spiketip-length="sm">
+          <abbr title="Dashboard"><i class="fa-solid fa-house" ></i></abbr><span>Dashboard</span>
         </button>
-        <button id="calenderBtn" for="#events">
+        <button id="calenderBtn" for="#events" spiketip-title="Events" spiketip-pos="top" spiketip-color="info" spiketip-length="sm">
           <abbr title="Events"><i class="fa-solid fa-calendar"></i></abbr
           ><span>Schedule Events</span>
         </button>
-        <button id="authBtn" for="#authentication">
+        <button id="authBtn" for="#authentication" spiketip-title="Auth." spiketip-pos="top" spiketip-color="info" spiketip-length="sm">
           <abbr title="Authentication"><i class="fa-solid fa-lock"></i></abbr
           ><span>Authentication</span>
         </button>
-        <button id="tablesBtn" for="#tables">
+        <button id="tablesBtn" for="#tables" spiketip-title="Tables" spiketip-pos="top" spiketip-color="info" spiketip-length="sm">
           <abbr title="Tables"><i class="fa-solid fa-table"></i></abbr
           ><span>Tables</span>
         </button>
-        <button id="chartsBtn" for="#charts">
+        <button id="chartsBtn" for="#charts" spiketip-title="Chart" spiketip-pos="top" spiketip-color="info" spiketip-length="sm">
           <abbr title="Charts"><i class="fa-solid fa-chart-simple"></i></abbr
           ><span>Charts</span>
         </button>
@@ -98,19 +104,19 @@
           <abbr title="Icons"><i class="fa-solid fa-icons"></i></abbr
           ><span>Icons</span>
         </button> -->
-        <button id="uiBtn" for="#uielements">
+        <button id="uiBtn" for="#uielements" spiketip-title="UI" spiketip-pos="top" spiketip-color="info" spiketip-length="sm">
           <abbr title="UI ELements"
             ><i class="fa-solid fa-layer-group"></i></abbr
           ><span>UI Elements</span>
-        <button id="pagesBtn" for="#pages">
+        <!-- <button id="pagesBtn" for="#pages">
           <abbr title="Pages"><i class="fa-solid fa-file-lines"></i></abbr
           ><span>Pages</span>
-        </button>
-        <button id="usersBtn" for="#users">
+        </button> -->
+        <button id="usersBtn" for="#users" spiketip-title="Users" spiketip-pos="top" spiketip-color="info" spiketip-length="sm">
           <abbr title="Users"><i class="fa-solid fa-users-line"></i></abbr
           ><span>Users</span>
         </button>
-        <button id="settingsBtn" for="#settings">
+        <button id="settingsBtn" for="#settings" spiketip-title="Settings" spiketip-pos="top" spiketip-color="info" spiketip-length="sm">
           <abbr title="Settings"><i class="fa-solid fa-gears"></i></abbr
           ><span>Settings</span>
         </button>
@@ -123,6 +129,7 @@
           <button id="menu"><i class="fa-solid fa-bars"></i></button>
 
           <div class="links">
+            
             <i class="fa-solid fa-spider fa-bounce"></i>
 
             <span id="span1">
@@ -168,6 +175,12 @@
                 </li>
               </ul>
             </span>
+            
+            
+            <div style="position: relative;">
+              <img src="./mypic1.jpg" alt="" height="40px" width="40px" style="border-radius: 50%;">
+              <img src="./online.png" alt="" height="10px" width="10px" style="border-radius: 50%; position: relative; right: 20px; border: 2px solid black;">
+            </div>
           </div>
         </nav>
 
@@ -565,9 +578,141 @@
         </div>
 
 
-        <div id="pages" class="example">Hello Pages</div>
-        <div id="users" class="example">Hello Users</div>
-        <div id="settings" class="example">Hello Settings</div>
+        <!-- <div id="pages" class="example">Hello Pages</div> -->
+        <div id="users" class="example">
+          <h2>User Table</h2>
+
+<table id="user-table">
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Full Name</th>
+      <th>Date of Birth</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Registration Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="user-id">1</td>
+      <td class="username">rahul_singh</td>
+      <td class="email">rahul.singh@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Rahul Singh</td>
+      <td class="date-of-birth">1987-05-15</td>
+      <td class="address">123 Gandhi Nagar, Delhi</td>
+      <td class="phone-number">9876543210</td>
+      <td class="registration-date">2024-04-20 10:00:00</td>
+    </tr>
+    <tr>
+      <td class="user-id">2</td>
+      <td class="username">priya_sharma</td>
+      <td class="email">priya.sharma@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Priya Sharma</td>
+      <td class="date-of-birth">1990-08-20</td>
+      <td class="address">456 Patel Nagar, Mumbai</td>
+      <td class="phone-number">8765432109</td>
+      <td class="registration-date">2024-04-20 11:30:00</td>
+    </tr>
+    <tr>
+      <td class="user-id">3</td>
+      <td class="username">vikram_patel</td>
+      <td class="email">vikram.patel@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Vikram Patel</td>
+      <td class="date-of-birth">1985-03-12</td>
+      <td class="address">789 Rajpur Road, Jaipur</td>
+      <td class="phone-number">7654321098</td>
+      <td class="registration-date">2024-04-21 09:45:00</td>
+    </tr>
+    <tr>
+      <td class="user-id">4</td>
+      <td class="username">anjali_gupta</td>
+      <td class="email">anjali.gupta@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Anjali Gupta</td>
+      <td class="date-of-birth">1980-12-30</td>
+      <td class="address">321 Patel Chowk, Kolkata</td>
+      <td class="phone-number">6543210987</td>
+      <td class="registration-date">2024-04-22 13:15:00</td>
+    </tr>
+    <tr>
+      <td class="user-id">5</td>
+      <td class="username">amit_kumar</td>
+      <td class="email">amit.kumar@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Amit Kumar</td>
+      <td class="date-of-birth">1992-11-05</td>
+      <td class="address">234 Nehru Nagar, Bangalore</td>
+      <td class="phone-number">5432109876</td>
+      <td class="registration-date">2024-04-22 16:20:00</td>
+    </tr>
+    <tr>
+      <td class="user-id">6</td>
+      <td class="username">deepika_reddy</td>
+      <td class="email">deepika.reddy@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Deepika Reddy</td>
+      <td class="date-of-birth">1988-07-18</td>
+      <td class="address">567 Seshadripuram, Hyderabad</td>
+      <td class="phone-number">4321098765</td>
+      <td class="registration-date">2024-04-23 08:00:00</td>
+    </tr>
+    <tr>
+      <td class="user-id">7</td>
+      <td class="username">arjun_mishra</td>
+      <td class="email">arjun.mishra@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Arjun Mishra</td>
+      <td class="date-of-birth">1975-02-28</td>
+      <td class="address">890 Mahatma Gandhi Road, Chennai</td>
+      <td class="phone-number">3210987654</td>
+      <td class="registration-date">2024-04-23 10:30:00</td>
+    </tr>
+    <tr>
+      <td class="user-id">8</td>
+      <td class="username">poonam_joshi</td>
+      <td class="email">poonam.joshi@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Poonam Joshi</td>
+      <td class="date-of-birth">1983-09-10</td>
+      <td class="address">432 Gandhi Chowk, Pune</td>
+      <td class="phone-number">2109876543</td>
+      <td class="registration-date">2024-04-24 14:45:00</td>
+    </tr>
+    <tr>
+      <td class="user-id">9</td>
+      <td class="username">mukesh_shah</td>
+      <td class="email">mukesh.shah@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Mukesh Shah</td>
+      <td class="date-of-birth">1986-11-25</td>
+      <td class="address">876 Swaminarayan Nagar, Ahmedabad</td>
+      <td class="phone-number">1098765432</td>
+      <td class="registration-date">2024-04-25 11:00:00</td>
+    </tr>
+    <tr>
+      <td class="user-id">10</td>
+      <td class="username">nisha_patil</td>
+      <td class="email">nisha.patil@example.com</td>
+      <td class="role">User</td>
+      <td class="full-name">Nisha Patil</td>
+      <td class="date-of-birth">1994-04-08</td>
+      <td class="address">678 Tilak Nagar, Nagpur</td>
+      <td class="phone-number">0987654321</td>
+      <td class="registration-date">2024-04-25 15:30:00</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+        <div id="settings" class="example">
+          <img src="./settings.png" alt="">
+        </div>
       </div>
 
       <!-- POPUP FORM & LUR BACKGROUND -->

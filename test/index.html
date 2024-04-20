@@ -1,22 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-butt
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Table</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table th, table td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+    table th {
+        background-color: #f2f2f2;
+    }
+    table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    table tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
 
-    <script src="//code.jquery.com/jquery-latest.min.js"></script>
-<script src="jquery.tooltip.js"></script>
-    <script>
-  
-    </script>
-  </body>
+<h2>User Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Full Name</th>
+      <th>Date of Birth</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Registration Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>john_doe</td>
+      <td>john.doe@example.com</td>
+      <td>User</td>
+      <td>John Doe</td>
+      <td>1985-10-15</td>
+      <td>123 Main St, Cityville</td>
+      <td>555-1234</td>
+      <td>2024-04-20 10:00:00</td>
+    </tr>
+    <!-- Add more rows for additional users -->
+  </tbody>
+</table>
+
+</body>
 </html>

@@ -29,6 +29,17 @@ function sideCustomization() {
 }
 
 
+  // if ($(window).width()<=938){
+  //   if (visible){
+  //     $("#content,nav").css("width", "100%");
+  //     $(".links").css("margin-right","0px !important");
+  //   }else{
+  //     $("#content,nav").css("width", "90%");
+  //     $("#sidebar").css("width", "10%");
+  //     $(".links").css("margin-right","70px !important");
+  //   }
+  // }  
+
 
 
 // ON START LOAD ONLY DASHBOARD TO SHOW REST HIDDEN
@@ -47,12 +58,6 @@ $("#span1,#span2").on("mouseenter", function () {
 $("#span1,#span2").on("mouseleave", function () {
   $(this).css("color", "white");
 });
-
-
-
-
-
-
 
 
 // SIDEBAR BUTTON CLICK  ->CONTENT TO  SHOW -> REST CONTENT & POPUP TO BE HIDE
@@ -86,6 +91,8 @@ $("#menu").on("click", function () {
   $(".model1 ,.model2 , .modelbg").hide();
   sideCustomization();
 });
+
+
 
 
 

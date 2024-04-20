@@ -833,6 +833,15 @@ div#authentication {
 /* Users section */
 
 #users > img {
+  margin-top: 20px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* settigs */
+
+#settings > img {
+  margin-top: 10px;
   width: 100%;
   object-fit: contain;
 }

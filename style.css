@@ -191,6 +191,17 @@ hr {
 .fa-spider:hover {
   cursor: pointer;
 }
+
+.searchbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.searchbar > input[type="text"] {
+  height: 25px;
+}
+
 /* //nav bar */
 
 /* popup */
@@ -225,7 +236,7 @@ hr {
 }
 .model1 > form > input {
   border-radius: 5px;
-  background-color: #0d1117;
+  background-color: #0d11176a;
   border: none;
   padding: 5px 12px;
   height: 40px;
@@ -238,7 +249,7 @@ hr {
   left: 50%;
   z-index: 2;
   padding: 25px;
-  background-color: #161b22;
+  background-color: #161b2269;
   border-radius: 5px;
   width: 330px;
 }
@@ -296,14 +307,14 @@ form > label {
   left: 50%;
   z-index: 2;
   padding: 25px;
-  background-color: #161b22;
+  background-color: #161b226d;
   border-radius: 5px;
   width: 400px;
 }
 
 .model2 > form > input {
   border-radius: 5px;
-  background-color: #0d1117;
+  background-color: #0d11176b;
   border: none;
   padding: 5px 12px;
   height: 40px;
@@ -355,7 +366,7 @@ form > label {
   background-color: white;
   border-radius: 5px;
   width: 50%;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   box-shadow: 0px 0px 5px lightgrey;
 }
 
@@ -365,9 +376,9 @@ form > label {
 #card4child {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 5px;
-  gap: 50px;
+  /* gap: 10px; */
 }
 
 #card1gchild > p,
@@ -391,6 +402,8 @@ form > label {
 .stats {
   padding: 7px;
   text-align: center;
+  font-size: 13px;
+  line-height: 25px;
 }
 
 /* chart section */
@@ -508,15 +521,35 @@ td {
   width: 50%;
   color: #6c757d;
   display: flex;
-  padding: 20px;
+  padding: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 0px 5px lightgrey;
   text-align: center;
+}
+
+#card5 > p,
+#card6 > p,
+#card7 > p,
+#card8 > p {
+  font-size: 12px;
+}
+
+#card5 > h4,
+#card6 > h4,
+#card7 > h4,
+#card8 > h4 {
+  margin: 10px;
+}
+
+#card5 > i,
+#card6 > i,
+#card7 > i,
+#card8 > i {
+  margin: 10px;
 }
 
 /* calender */
@@ -772,7 +805,16 @@ div#authentication {
   #card4child {
     padding: 30px;
     flex-direction: column;
-    gap: 12px;
+  }
+
+  .links > .fa-spider,
+  #span1,
+  #span2 {
+    display: none;
+  }
+
+  .links{
+    margin-right: -68px !important;
   }
 }
 

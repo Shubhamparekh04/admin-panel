@@ -474,5 +474,12 @@ var calendarInstance1 = new calendarJs("calendar", {
 
 // //chart section
 
+
+// searchbar
+$(".searchbar > input[type=text]").fadeOut();
+$(".searchbar > div").on("click",function(){
+  $(".searchbar > input[type=text]").fadeToggle();
+});
+
 // ---------------------------------
 

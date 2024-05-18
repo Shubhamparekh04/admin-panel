@@ -18,10 +18,10 @@ function sideCustomization() {
   } else {
     $("#content,nav").css("width", "80%");
     $(".modelbg").css({
-      left: "250.5px",
+      left: "315px",
       top: "55px",
       width: "80%",
-      height: "90vh",
+      height: "93vh",
     });
     $(".model1").css({ left: "47%", top: "30%" });
     $(".model2").css({ left: "45%", top: "25%" });
@@ -29,16 +29,16 @@ function sideCustomization() {
 }
 
 
-  // if ($(window).width()<=938){
-  //   if (visible){
-  //     $("#content,nav").css("width", "100%");
-  //     $(".links").css("margin-right","0px !important");
-  //   }else{
-  //     $("#content,nav").css("width", "90%");
-  //     $("#sidebar").css("width", "10%");
-  //     $(".links").css("margin-right","70px !important");
-  //   }
-  // }  
+// if ($(window).width()<=938){
+//   if (visible){
+//     $("#content,nav").css("width", "100%");
+//     $(".links").css("margin-right","0px !important");
+//   }else{
+//     $("#content,nav").css("width", "90%");
+//     $("#sidebar").css("width", "10%");
+//     $(".links").css("margin-right","70px !important");
+//   }
+// }  
 
 
 
@@ -129,10 +129,10 @@ $("#formbtn2 > input[type=button]:nth-child(2)").on("click", function () {
 
 // MODEL BG CLICK TO HIDE 
 
-$("#modelbgchild").click(function(){
+$("#modelbgchild").click(function () {
   $(".model1,.model2,.modelbg").hide();
 });
-  
+
 
 
 //COUNTER
@@ -142,8 +142,8 @@ $(".counter").counter({
   countFrom: 0, // start counting at this number, default: 0
   countTo: 0, // count to this number, default: 0
 
-  onStart: function () {}, // callback on start of the counting
-  onComplete: function () {}, // callback on completion of the counting
+  onStart: function () { }, // callback on start of the counting
+  onComplete: function () { }, // callback on completion of the counting
   // function used to format the displayed numbers.
   numberFormatter: function (number) {
     return "" + ~~number;
@@ -155,7 +155,7 @@ $(".counter").counter({
 
 
 // DASHBOARD CHARTS
-    // Dashboard chart 1
+// Dashboard chart 1
 var options = {
   series: [
     {
@@ -199,7 +199,7 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chart1"), options);
 chart.render();
 
-    //Dashboard chart 2
+//Dashboard chart 2
 var options = {
   series: [
     {
@@ -312,11 +312,11 @@ var calendarInstance1 = new calendarJs("calendar", {
 
 // CHART SECTION
 
- // chart1
+// chart1
 
- const ctx = document.getElementById("myChart1");
+const ctx = document.getElementById("myChart1");
 
- new Chart(ctx, {
+new Chart(ctx, {
   type: "line",
   data: {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
@@ -335,11 +335,11 @@ var calendarInstance1 = new calendarJs("calendar", {
       },
     },
   },
- });
+});
 
- // chart 2
+// chart 2
 
- (async function () {
+(async function () {
   const data = [
     { year: 2010, count: 10 },
     { year: 2011, count: 20 },
@@ -362,11 +362,11 @@ var calendarInstance1 = new calendarJs("calendar", {
       ],
     },
   });
- })();
+})();
 
- // chart 3
+// chart 3
 
- (async function () {
+(async function () {
   const data = [
     { year: 2010, count: 10 },
     { year: 2011, count: 20 },
@@ -389,11 +389,11 @@ var calendarInstance1 = new calendarJs("calendar", {
       ],
     },
   });
- })();
+})();
 
- // chart 4
+// chart 4
 
- (async function () {
+(async function () {
   const data = [
     { year: 2010, count: 10 },
     { year: 2011, count: 20 },
@@ -416,11 +416,11 @@ var calendarInstance1 = new calendarJs("calendar", {
       ],
     },
   });
- })();
+})();
 
- // chart 5
+// chart 5
 
- (async function () {
+(async function () {
   const data = [
     { year: 2010, count: 10 },
     { year: 2011, count: 20 },
@@ -443,11 +443,11 @@ var calendarInstance1 = new calendarJs("calendar", {
       ],
     },
   });
- })();
+})();
 
- // chart 6
+// chart 6
 
- (async function () {
+(async function () {
   const data = [
     { year: 2010, count: 10 },
     { year: 2011, count: 20 },
@@ -470,14 +470,14 @@ var calendarInstance1 = new calendarJs("calendar", {
       ],
     },
   });
- })();
+})();
 
 // //chart section
 
 
 // searchbar
 $(".searchbar > input[type=text]").fadeOut();
-$(".searchbar > div").on("click",function(){
+$(".searchbar > div").on("click", function () {
   $(".searchbar > input[type=text]").fadeToggle();
 });
 
